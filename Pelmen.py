@@ -49,3 +49,12 @@ massFractionMeat = float(arr[6])  # массовая доля мяса в гот
 massFractionEggs = float(arr[7])  # массовая доля яиц в готовой продукции   ая %
 massFractionSalt = float(arr[8])  # массовая доля соли в готовой продукции   ас %
 massFractionSpices = float(arr[9])  # массовая доля специй в готовой продукции   асп %
+
+def print_name_arr(arr, name_arr):
+    n = len(arr)
+    for index in range(n):
+        print(arr[index] + "  " + name_arr[index])
+    return 1
+
+
+print_name_arr(arr, name_arr)
