@@ -85,3 +85,48 @@ def cutter_machines(
     N = math.ceil(Ptlf / cutterPerformance)
     print(Ptlf / cutterPerformance)
     return N
+
+
+def checkingAllIngredientsPlace(
+    massFractionDough,
+    massFractionMeat,
+    massFractionEggs,
+    massFractionSalt,
+    massFractionSpices,
+):
+    if (
+        massFractionDough
+        + massFractionMeat
+        + massFractionEggs
+        + massFractionSalt
+        + massFractionSpices
+        == 100
+    ):
+        return True
+    else:
+        return False
+
+if checkingAllIngredientsPlace(
+    massFractionDough,
+    massFractionMeat,
+    massFractionEggs,
+    massFractionSalt,
+    massFractionSpices,
+)==True:
+
+    N_dumpling_machines = dumpling_machines(
+        dailyOutputFinishedProducts, t, dumplingMachineProductivity
+    )
+    N_dough_kneading_machines = dough_kneading_machines(
+        dailyOutputFinishedProducts, t, massFractionDough, kneadingMachinePerformance
+    )
+    N_cutter_machines = cutter_machines(
+        dailyOutputFinishedProducts, t, massFractionDough, cutterPerformance
+    )
+
+
+    print(N_dumpling_machines)
+    print(N_dough_kneading_machines)
+    print(N_cutter_machines)
+else:
+    print("Invalid set of components")
