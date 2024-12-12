@@ -65,3 +65,13 @@ def dumpling_machines(dailyOutputFinishedProducts, t, dumplingMachineProductivit
     N = math.ceil(Ptlp / dumplingMachineProductivity)
     print(Ptlp / dumplingMachineProductivity)
     return N
+
+# II. Технологическая линия подготовки теста.
+def dough_kneading_machines(
+    dailyOutputFinishedProducts, t, massFractionDough, kneadingMachinePerformance
+):
+    Ptlp = dailyOutputFinishedProducts / (2 * t)
+    Ptlt = Ptlp * massFractionDough / 100
+    N = math.ceil(Ptlt / kneadingMachinePerformance)
+    print(Ptlt / kneadingMachinePerformance)
+    return N
