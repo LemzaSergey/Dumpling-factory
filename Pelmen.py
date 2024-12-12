@@ -58,3 +58,10 @@ def print_name_arr(arr, name_arr):
 
 
 print_name_arr(arr, name_arr)
+
+# I. Технологическая линия изготовления пельменей
+def dumpling_machines(dailyOutputFinishedProducts, t, dumplingMachineProductivity):
+    Ptlp = dailyOutputFinishedProducts / (2 * t)
+    N = math.ceil(Ptlp / dumplingMachineProductivity)
+    print(Ptlp / dumplingMachineProductivity)
+    return N
