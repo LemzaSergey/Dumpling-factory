@@ -75,3 +75,13 @@ def dough_kneading_machines(
     N = math.ceil(Ptlt / kneadingMachinePerformance)
     print(Ptlt / kneadingMachinePerformance)
     return N
+
+# III. Технологическая линия подготовки фарша.
+def cutter_machines(
+    dailyOutputFinishedProducts, t, massFractionDough, cutterPerformance
+):
+    Ptlp = dailyOutputFinishedProducts / (2 * t)
+    Ptlf = ((100 - massFractionDough) * Ptlp) / 100
+    N = math.ceil(Ptlf / cutterPerformance)
+    print(Ptlf / cutterPerformance)
+    return N
