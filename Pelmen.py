@@ -28,3 +28,24 @@ def import_file_csv_name_arr():
 
 
 name_arr = import_file_csv_name_arr()
+
+dailyOutputFinishedProducts = float(arr[0])  # суточная выработка готовой продукции Qсут
+t = float(arr[1])  # продолжительность рабочей смены
+
+# I. Технологическая линия изготовления пельменей
+dumplingMachineProductivity = float(
+    arr[2]
+)  # производительность пельменного автомата рпа
+
+# II. Технологическая линия подготовки теста.
+massFractionDough = float(arr[3])  # массовая доля теста в готовой продукции   ат %
+kneadingMachinePerformance = float(
+    arr[4]
+)  # производительность тестомесильной машины   ртм
+
+# III. Технологическая линия подготовки фарша.
+cutterPerformance = float(arr[5])  # производительность куттера рк
+massFractionMeat = float(arr[6])  # массовая доля мяса в готовой продукции   ам  %
+massFractionEggs = float(arr[7])  # массовая доля яиц в готовой продукции   ая %
+massFractionSalt = float(arr[8])  # массовая доля соли в готовой продукции   ас %
+massFractionSpices = float(arr[9])  # массовая доля специй в готовой продукции   асп %
